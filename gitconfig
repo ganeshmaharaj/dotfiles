@@ -1,0 +1,86 @@
+[user]
+	name=Ganesh Maharaj Mahalingam
+	email=ganesh.mahalingam@intel.com
+	signingkey = D6550A00
+
+[core]
+#	editor = vim
+#	gitproxy=git-proxy
+#	gitproxy=http-proxy-gw
+#	autocrlf = input
+[color]
+#	ui = always
+
+### UMG PROJECT DETAILS ###
+[review "android.intel.com:8080"]
+  username = ganeshma
+
+#[url "ssh://fm-gcr-glb.fm.intel.com:29418/"]
+#[url "ssh://jfumg-gcrmirror.jf.intel.com:29418/"]
+#[url "ssh://android-mirror-or.devtools.intel.com:29418/"]
+#[url "ssh://android-mirror-or.devtools.intel.com:29418/"]
+[url "ssh://android-mirror-fm.devtools.intel.com:29418/"]
+  insteadOf=ssh://fm-gcr-glb.fm.intel.com/
+  insteadOf=git://fm-gcr-glb.fm.intel.com/
+  insteadOf=git://android.intel.com/
+  insteadOf=ssh://mcg-devgcr-sc1.jf.intel.com/
+  insteadOf=git://mcg-devgcr-sc1.jf.intel.com/
+  insteadOf=ssh://android.intel.com:29418/
+  insteadOf=ssh://android.intel.com/
+  insteadOf=ssh://android-mirror.devtools.intel.com/
+  insteadOf=git://android-mirror.devtools.intel.com/
+  insteadOf=ssh://android-mirror.devtools.intel.com:29418/
+  insteadOf=ssh://jfumg-gcrmirror.jf.intel.com/
+  insteadOf=ssh://jfumg-gcrmirror.jf.intel.com:29418/
+[url "ssh://android.intel.com:29418/"]
+  pushInsteadOf=ssh://android.intel.com/
+  pushInsteadOf=ssh://android.intel.com:29418/
+  pushInsteadOf=ssh://android-mirror.devtools.intel.com/
+  pushInsteadOf=git://android-mirror.devtools.intel.com/
+  pushInsteadOf=ssh://android-mirror.devtools.intel.com:29418/
+  pushInsteadOf=ssh://android-mirror-fm.devtools.intel.com/
+  pushInsteadOf=ssh://android-mirror-fm.devtools.intel.com:29418/
+  pushInsteadOf=ssh://fm-gcr-glb.fm.intel.com/
+  pushInsteadOf=ssh://fm-gcr-glb.fm.intel.com:29418/
+  pushInsteadOf=ssh://jfumg-gcrmirror.jf.intel.com/
+  pushInsteadOf=ssh://jfumg-gcrmirror.jf.intel.com:29418/
+### END UMG PROJECT DETAILS ###
+[url "ssh://gmmaha@review.openstack.org:29418/openstack/"]
+	pushInsteadOf=http://github.com/openstack/
+	pushInsteadOf=https://github.com/openstack/
+
+
+### SP PROJECT DETAILS ###
+[review "sp.jf.intel.com/gerrit"]
+  username = ganeshma
+### END SP PROJECT DETAILS ###
+
+### IRDA PROJECT DETAILS ###
+[review "irda.intel.com/gerrit"]
+  username = ganeshma
+### END IRDA PROJECT DETAILS ###
+
+### AIA PROJECT DETAILS ###
+[review "aia-review.intel.com"]
+  username = ganeshma
+### END AIA PROJECT DETAILS ###
+
+#[url "ssh://spgerrit.mp.intel.com/home/gerrit/sp-mirror/"]
+#  insteadOf=ssh://sp.jf.intel.com/
+#  insteadOf=ssh://sp.jf.intel.com:29418/
+#  insteadOf=ssh://sp.jf.intel.com:29418/
+#  insteadOf=git://sp.jf.intel.com/
+#  insteadOf=git://sp.mp.intel.com/home/gerrit/sp-mirror/
+#[url "ssh://sp.jf.intel.com:29418/"]
+#  pushInsteadOf=ssh://sp.jf.intel.com/
+#  pushInsteadOf=ssh://sp.mp.intel.com/home/gerrit/sp-mirror/
+#  pushInsteadOf=git://sp.mp.intel.com/home/gerrit/sp-mirror/
+
+[color]
+	ui = auto
+
+[gitreview]
+	username=gmmaha
+
+[credential]
+	helper=store

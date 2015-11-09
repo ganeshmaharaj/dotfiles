@@ -1,0 +1,18 @@
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+PS1="\[$(tput setaf 4)\]\u\[$(tput setaf 3)\]|\[$(tput setaf 2)\]\h\[$(tput setaf 3)\]|\[$(tput setaf 5)\]\w \[$(tput setaf 4)\]>\[$(tput setaf 2)\]>\[$(tput setaf 5)\]> \[$(tput sgr0)\]"
+export EDITOR=vim
+eval `ssh-agent`
+for key in `ls $HOME/.ssh/id_rsa*.pub`
+do
+ssh-add ${key%\.*}
+done
+export TERM=xterm-256color
+
+# Swift additions
+export SWIFT_TEST_CONFIG_FILE=/etc/swift/test.conf
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/swift/bin
+export LD_LIBRARY_PATH=/usr/local/lib
+#export SAIO_BLOCK_DEVICE=/srv/swift-disk
+source $HOME/swiftrc
