@@ -41,6 +41,9 @@ set noswapfile
 " Be smart when using tabs ;)
 set smarttab
 
+" Insert space whenever i press tab
+set expandtab
+
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
@@ -63,6 +66,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-flake8'
+Plugin 'Rykka/riv.vim'
 " Plugin 'bling/vim-airline'
 
 call vundle#end()
