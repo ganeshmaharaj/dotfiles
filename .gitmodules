@@ -10,3 +10,9 @@
 	path = vim/bundle/riv.vim
 	url = https://github.com/Rykka/riv.vim.git
 	branch = master
+[submodule "vim/bundle/YouCompleteMe"]
+	path = vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "vim/bundle/fugitive.vim"]
+	path = vim/bundle/fugitive.vim
+	url = https://github.com/vim-scripts/fugitive.vim.git

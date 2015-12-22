@@ -67,10 +67,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-flake8'
 Plugin 'Rykka/riv.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'tpope/vim-fugitive'
 " Plugin 'bling/vim-airline'
 
 call vundle#end()
 filetype plugin indent on
+
+"YouCompleteMe stuff
+let g:ycm_min_num_of_chars_for_completion = 0
 
 " Flake8 funkiness
 let g:flake8_show_in_file=1

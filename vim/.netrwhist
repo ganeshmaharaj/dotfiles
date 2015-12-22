@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/swift/swift3'
+let g:netrw_dirhist_2='/home/swift/swift3/swift3'
+let g:netrw_dirhist_3='/home/swift/swift3/swift3/test'
+let g:netrw_dirhist_4='/home/swift/swift3/swift3/test/functional'
