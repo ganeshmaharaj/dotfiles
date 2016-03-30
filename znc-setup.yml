@@ -1,0 +1,52 @@
+- hosts: localhost
+  connection: local
+  roles:
+    - ansible-znc-on-znc
+  vars:
+    # By default we will run znc as the same user/group Ansible uses to
+    # connect to the system.  If you prefer to specify a different
+    # user/group or if Ansible uses the root user you can specify the
+    # user/group to run znc.  To run znc as the user 'znc' and group 'znc'
+    # uncomment the following two lines:
+    #znc_system_user: znc
+    #znc_system_group: znc
+    # znc_user and znc_server_passwords can go into a vault-encrypted file.
+    znc_user:
+      name: gmmaha
+      hash: <HASH_VALUE>
+      method: SHA256
+      salt: <SALT_DATA>
+      password: <PLAIN_TEXT_PASSWORD>
+    znc_server_passwords:
+      freenode: <FREENODE_PASSWORD>
+    # The remaining values are safe to leave in the playbook in clear text.
+    znc_nick: gmmaha
+    znc_alt_nick: gmmaharaj
+    znc_base_port: 7001
+    znc_buffer: 50000
+    znc_quit_msg: 'Off to save the world!!'
+    znc_extra_modules: [ 'nickserv' ]
+    znc_real_name: Ganesh Mahalingam
+    znc_networks:
+      - name: freenode
+        server_name: chat.freenode.net
+        server_port: 6667
+        ident: gmmaha
+        channels:
+          - "#openstack-ironic"
+          - "#openstack-kolla"
+          - "#openstack-swift"
+          - "#osic"
+          - "#swift3"
+    znc_clients:
+      - name: desktop
+        port: 7002
+      - name: laptop
+        port: 7003
+        auto_clear_chan_buffer: true
+      - name: phone
+        port: 7004
+        auto_clear_chan_buffer: true
+      - name: laptop_linux
+        port: 7005
+        auto_clear_chan_buffer: true
